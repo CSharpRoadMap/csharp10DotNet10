@@ -1,18 +1,26 @@
 ﻿namespace Library {
 
     /*
-        This class represents a User.
+        This class represents a Person.
     */
-    public class User {
-        public string Id { get; set; }
+    public class Person {
         public string Name { get; set; }
         public string LastName { get; set; }
-        public int YearOfSubscription { get; set; }
+
         public string Denomination {
             get {
                 return $"{Name} {LastName}";
             }
         }
+    }
+
+    /*
+        This class represents a User.
+    */
+    public class User : Person {
+        public string Id { get; set; }
+
+        public int YearOfSubscription { get; set; }
     }
 
     /*
