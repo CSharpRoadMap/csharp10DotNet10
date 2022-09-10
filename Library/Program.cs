@@ -7,7 +7,7 @@
         public string Name { get; set; }
         public string LastName { get; set; }
 
-        public string Denomination {
+        public virtual string Denomination {
             get {
                 return $"{Name} {LastName}";
             }
@@ -21,6 +21,12 @@
         public string Id { get; set; }
 
         public int YearOfSubscription { get; set; }
+
+        public override string Denomination {
+            get {
+                return $"{Id} {Name} {LastName}";
+            }
+        }
     }
 
     /*
