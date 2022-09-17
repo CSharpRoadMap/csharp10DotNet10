@@ -8,8 +8,8 @@ namespace ExpressionBodiedMembers
         private static string name;
 
         static string Name {
-            get => name.ToUpper();
-            set => name = value;
+            get => this.name.ToUpper();
+            set => this.name = value;
         }
         static void Main(string[] args)
         {
